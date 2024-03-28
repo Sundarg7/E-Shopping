@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+.websitename:hover {
+    color: gray;
+    cursor: pointer;
+
+}
 nav{
     background-color: black;
     color: white;
