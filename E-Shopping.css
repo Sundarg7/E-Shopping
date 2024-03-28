@@ -37,23 +37,16 @@ input{
 .contact{
     cursor: pointer;
 }
-.box{
-    border-color: black;
-    border-style: solid;
-    border-width: 2px;
-    display: inline-block;
-    width: 220px;
-    padding: 15px;
-}
-
 .products,.listofproducts{
     text-align: center;
 }
-
-.box:hover,.smartphone:hover{
+/*
+.box:hover{
     background-color: black;
     color: white;
 }
+*/
+
 button {
     background-color:blue;
     color: white;
@@ -63,22 +56,64 @@ button {
     cursor: pointer;
 }
 .smartphone,.laptop{
-    border-color: black;
+    border-color: gray;
     border-style: solid;
     border-width: 2px;
     display: inline-block;
-    padding: 15px;
+    padding: 20px;
     width: 220px;
     cursor: pointer;
 }
 a{
     color: gray;
 }
-a:hover,.laptop:hover{
+
+a:hover,.laptop:hover,.smartphone:hover{
     color: white;
     background-color: black;
 }
+
 .banner{
     padding: 3px;
     cursor: pointer;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e7e4e4;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 200px;
+    min-height: 200px;
+    text-align: center;
+    scroll-snap-align: start;
+}
+.card:nth-child(even) {
+    background: #e7e4e4;
+}
+.box {
+    display: flex;
+    gap: 25px;
+    padding: 10px;
+    max-width: 400px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-left: 550px;
+}
+.container::-webkit-scrollbar {
+    height: 10px;
+}
+.container::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+.container::-webkit-scrollbar-track {
+    background: #e7e4e4;
+    border-radius: 10px;
+}
+.smartphone:hover,.laptop:hover {
+    filter: grayscale(0%);
+    scale: 1.1;
 }
